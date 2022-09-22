@@ -1,0 +1,28 @@
+-- Create a shoe store data base
+
+create table shoes(id INTEGER PRIMARY KEY, item TEXT, department TEXT, price INTEGER, quantity INTEGER, size INTEGER);
+
+INSERT INTO shoes VALUES(1, "nike mercurial", "soccer", 250.00, 68, "10, 9, 8");
+INSERT INTO shoes VALUES(2, "vans old skool", " casual", 70.00, 95, "10.5, 10, 9.5, 9 , 8, 7");
+INSERT INTO shoes VALUES(3, "adidas ultra boost", "casual", 150.00, 64, "10, 9.5, 9, 8.5");
+INSERT INTO shoes VALUES(4, "nike tiempo", "soccer", 230.00, 50, "9.5, 9, 8.5, 8, 7");
+INSERT INTO shoes VALUES(5, "adidas speedflow", "soccer", 251.99, 100, "10.5, 10, 9.5, 9");
+INSERT INTO shoes VALUES(6, "reebok classic", "casual", 80.00, 77, "9, 8.5, 8");
+INSERT INTO shoes VALUES(7, " nike vaporfly", "runner", 174.97, 55, "11, 10.5, 10, 9.5");
+INSERT INTO shoes VALUES(8, "adidas copa", "soccer", 275.00, 82, "10, 9, 8");
+INSERT INTO shoes VALUES(9, "doc martens", "casual", 140.00, 99, "9, 8.5, 8, 7.5");
+INSERT INTO shoes VALUES(10, "nike superfly", "soccer", 275.00, 100, "10.5, 10, 9.5, 9");
+INSERT INTO shoes VALUES(11, "adidas nmd", "casual", 100.00, 54, "9.5, 9, 8.5, 8");
+INSERT INTO shoes VALUES(12, "nike zoom", "runner", 89.99,
+70, "9, 8, 7");
+INSERT INTO shoes VALUES(13, "converse", "casual", 80.00,
+89, "10, 9, 8, 7");
+INSERT INTO shoes VALUES(14, "yeezys", "casual", 200.00,
+76, "11, 10, 9, 8");
+INSERT INTO shoes VALUES(15, "adidas predator", "soccer", 280.00,76, "10, 9, 8, 7");
+
+--display the database ordered by price
+SELECT * FROM shoes order by price;
+
+--what is the sum price of shoes by department?
+SELECT department, SUM(price) from shoes group by department
